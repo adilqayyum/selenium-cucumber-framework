@@ -23,15 +23,24 @@ You can also select specific scenarios to execute using `-Dcucumber.options="--t
 
 ## Architecture 🔨🔨🔨
 
+- POM (Page Object Model)
+    - Implementation makes it easier to keep centralized code for all pages
+    - Improves redundancy of locators and page methods
+    - Change in DOM becomes easier to manage
+
 - Selenium WebDriver tool as the baseline due to its vast array of open-source collection of APIs which is used for testing web applications.
-	- Largest open source community support and numerous integrations
+	- Largest open source community and numerous integrations
+	- Native Cross Browser and Cross OS support
+	- Support for multiple languages and vast range of frameworks 
 	- Use of regex based xpaths to make tests dynamic and yet stable
 	
 	
-- Cucumber Framework due to its BDD approach
+- Cucumber Framework due to its BDD (Behavior Driven Development) approach
 	- Gherkin language support, making it layman friendly and understandable for all stakeholders.
+	- Cross Platform Support for Web, iOS, Android & more.
 	- Easy parameterization from the feature files, making tests scalable on the go.
 	- Reusability of same steps across different tests in different combinations.
+	- Built in Cucumber Reports which contain the logs and precise test details.
 
 ---
 
