@@ -30,7 +30,7 @@ public class HomePageSteps {
 
     @And("^Click on Language Picker$")
     public void clickOnLanguagePickerButton() {
-        this.homePage.clickOnlanguagePicker();
+        this.homePage.clickOnLanguagePicker();
     }
 
     @And("^Click on Dropdown Value \"([^\"]*)\"$")

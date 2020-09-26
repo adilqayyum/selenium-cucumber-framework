@@ -40,21 +40,23 @@ public class HomePage extends BasePage{
         wait.forLoading(10);
     }
 
-    void clickOnlanguagePicker() {
+    void clickOnLanguagePicker() {
         wait.forElementToBeDisplayed(10, this.languagePicker, "Language Picker");
         this.languagePicker.click();
     }
 
     void clickOnValue(String spanText) {
-        WebElement textElement = driver.findElement(By.xpath("//*[@class='language-picker-component']//*[contains(text(), '"+spanText+"')]"));
-        wait.forElementToBeDisplayed(10, textElement,
+        WebElement textElement = driver.findElement(
+                By.xpath("//*[@class='language-picker-component']//*[contains(text(), '"+spanText+"')]"));
+        wait.forElementToBeDisplayed(20, textElement,
                 "Span Value");
         textElement.click();
     }
 
     void selectText(String labelText) {
-        WebElement textElement = driver.findElement(By.xpath("//*[@class='questions-page-container']//*[contains(text(), '"+labelText+"')]"));
-        wait.forElementToBeDisplayed(10, textElement,
+        WebElement textElement = driver.findElement(
+                By.xpath("//*[@class='questions-page-container']//*[contains(text(), '"+labelText+"')]"));
+        wait.forElementToBeDisplayed(20, textElement,
                 "Label Value");
         textElement.click();
     }
