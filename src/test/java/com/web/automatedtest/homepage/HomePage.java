@@ -37,6 +37,7 @@ public class HomePage extends BasePage{
     void clickOnStartLearning() {
         wait.forElementToBeDisplayed(10, this.learningButton, "Start Learning");
         this.learningButton.click();
+        wait.forLoading(10);
     }
 
     void clickOnlanguagePicker() {
@@ -48,6 +49,13 @@ public class HomePage extends BasePage{
         WebElement textElement = driver.findElement(By.xpath("//*[@class='language-picker-component']//*[contains(text(), '"+spanText+"')]"));
         wait.forElementToBeDisplayed(10, textElement,
                 "Span Value");
+        textElement.click();
+    }
+
+    void selectText(String labelText) {
+        WebElement textElement = driver.findElement(By.xpath("//*[@class='questions-page-container']//*[contains(text(), '"+labelText+"')]"));
+        wait.forElementToBeDisplayed(10, textElement,
+                "Label Value");
         textElement.click();
     }
 }

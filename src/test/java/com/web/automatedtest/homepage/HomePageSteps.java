@@ -33,9 +33,14 @@ public class HomePageSteps {
         this.homePage.clickOnlanguagePicker();
     }
 
-    @And("^Click on Value \"([^\"]*)\"$")
+    @And("^Click on Dropdown Value \"([^\"]*)\"$")
     public void clickOnValue(String value) {
         this.homePage.clickOnValue(value);
+    }
+
+    @And("^Select Form Value \"([^\"]*)\"$")
+    public void selectText(String value) {
+        this.homePage.selectText(value);
     }
 
     @Then("^page title is \"([^\"]*)\"$")
