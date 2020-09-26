@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Wait {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public Wait(WebDriver driver) {
         this.driver = driver;

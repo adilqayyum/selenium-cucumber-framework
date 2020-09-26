@@ -8,3 +8,15 @@ Feature: Home page
     Examples:
       | URL |
       | https://www.babbel.com/ |
+
+  @home_page @home_page_title
+  Scenario: Check title
+    Given A user navigates to URL "https://www.babbel.com/"
+    Then page title is "Language for Life - Babbel.com"
+
+  @home_page @start_learning
+  Scenario: Start Learning Check
+    Given A user navigates to URL "https://www.babbel.com/"
+    Then Click on Language Picker
+    And Click on Value "German"
+    And Click on Start Learning
