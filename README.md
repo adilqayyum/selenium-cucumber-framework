@@ -4,6 +4,8 @@
 
 This is a simple yet easily scalable Web Application Testing Framework designed in BDD fashion. The languages used are Java and Gherkins. The build tool used is Maven. The tests can easily be executed, modified or added without many code changes or complexities. The tests can be scaled or modified on the go right from the feature files.
 
+Languages Used: JAVA, Gherkins
+
 ## Installation
 
 To install all dependencies, run 
