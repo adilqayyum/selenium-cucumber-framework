@@ -24,6 +24,15 @@ By default, tests will run on Chrome. To change that, specify `-Dbrowser={browse
 
 You can also select specific scenarios to execute using `-Dcucumber.options="--tags @your_tag"`. More info about tags and how to combine them [here](https://github.com/cucumber/cucumber/tree/master/tag-expressions).
 
+To run from the IDE itself (IntelliJ), following are the steps:
+- Navigate to Run -> Edit Configurations
+- Click on + Icon, and select Cucumber Java
+- In Main Class, add io.cucumber.core.cli.Main
+- In Glue, add com.web.automatedtest.homepage com.web.automatedtest.infrastructure.driver
+- In Feature or Folder Path, add path to your code/selenium-cucumber-framework/src/test/resources/features/Home_page.feature
+- Set Program Arguments to  --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter
+- Click on Apply, Ok and then Run your tests from the Run button on the toolbar
+
 ---
 
 ## Architecture 🔨🔨🔨
