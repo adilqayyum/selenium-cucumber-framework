@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class Wait {
 
     private final WebDriver driver;
@@ -14,21 +16,21 @@ public class Wait {
         this.driver = driver;
     }
 
-    private void waitUntilCondition(ExpectedCondition condition, String timeoutMessage, int timeout) {
+    private void waitUntilCondition(ExpectedCondition condition, String timeoutMessage, Duration timeout) {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.withMessage(timeoutMessage);
         wait.until(condition);
     }
 
-    public void forLoading(int timeout){
+    public void forLoading(Duration timeout){
         ExpectedCondition<Object> condition = ExpectedConditions.jsReturnsValue("return document.readyState==\"complete\";");
-        String timeoutMessage = "Page didn't load after " + Integer.toString(timeout) + " seconds.";
+        String timeoutMessage = "Page didn't load after " + timeout + " seconds.";
         waitUntilCondition(condition, timeoutMessage, timeout);
     }
 
-    public void forElementToBeDisplayed(int timeout, WebElement webElement, String webElementName){
+    public void forElementToBeDisplayed(Duration timeout, WebElement webElement, String webElementName){
         ExpectedCondition<WebElement> condition = ExpectedConditions.visibilityOf(webElement);
-        String timeoutMessage = webElementName + " wasn't displayed after " + Integer.toString(timeout) + " seconds.";
+        String timeoutMessage = webElementName + " wasn't displayed after " + timeout + " seconds.";
         waitUntilCondition(condition, timeoutMessage, timeout);
     }
 }
